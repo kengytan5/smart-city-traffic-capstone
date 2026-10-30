@@ -22,8 +22,8 @@ input_file = "engineered_traffic_features.csv"
 logger.info("Visualisation Workspace Initialized. Ingesting features matrix...")
 
 #Load the file created in Task 2
-#if not os.path.exists(input_file):
-#    raise FileNotFoundError(f"Missing resource file: {input_file}. Run Task 2 first!")
+if not os.path.exists(input_file):
+    raise FileNotFoundError(f"Missing resource file: {input_file}. Make sure you ran Task 2: feature_engineering.py first!")
 
 df = pd.read_csv(input_file)
 df['date_time'] = pd.to_datetime(df['date_time'])
@@ -225,3 +225,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

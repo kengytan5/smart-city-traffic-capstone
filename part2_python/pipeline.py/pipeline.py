@@ -19,7 +19,7 @@ logging.basicConfig(
 logger = logging.getLogger("Task 1: Data Pipeline Construction")
 
 #Define the file configuration baseline
-csv_filename = r'C:\Users\kw\OneDrive\NUSSOC\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility\Metro_Interstate_Traffic_Volume.csv'
+csv_filename = r'C:\Users\kw\OneDrive\NUSSOC\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility\Part 2\Metro_Interstate_Traffic_Volume.csv'
 EXPECTED_COLUMNS = [
     'holiday', 'temp', 'rain_1h', 'snow_1h', 
     'clouds_all', 'weather_main', 'weather_description', 
@@ -129,7 +129,5 @@ else:
 output_filename = "cleaned_traffic_data.csv"
 df.to_csv(output_filename, index=False)
 
-logger.info(f"Interactive Pipeline execution finished successfully. Cleaned matrix saved to: {output_filename}")
-
-
+logger.info(f"Pipeline execution finished successfully. Cleaned matrix saved to: {output_filename}")
 

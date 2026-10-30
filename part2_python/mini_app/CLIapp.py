@@ -22,7 +22,7 @@ logger.info("Initializing Smart City CLI Application Workspace...")
 
 #Verify database artifact availability
 if not os.path.exists(data_source):
-    logger.error(f"Inbound data missing: {data_source} not found. Run Task 2 first!")
+    logger.error(f"Inbound data missing: {data_source} not found. Make sure you ran Task 2: feature_engineering.py first!")
     raise FileNotFoundError(f"Missing engineered dataset asset.")
 
 df = pd.read_csv(data_source)

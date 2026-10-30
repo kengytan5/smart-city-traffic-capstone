@@ -29,7 +29,7 @@ logger.info("Starting Execution: Ingesting cleaned data")
 
 try:
     if not os.path.exists(input_file):
-        raise FileNotFoundError(f"Missing source file: {input_file}. Make sure you ran Task 1 first!")
+        raise FileNotFoundError(f"Missing source file: {input_file}. Make sure you ran Task 1: pipeline.py first!")
         
     df = pd.read_csv(input_file)
     
