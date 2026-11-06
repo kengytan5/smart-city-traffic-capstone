@@ -4,8 +4,7 @@ import logging
 import pandas as pd
 import numpy as np
 
-#Configure the logging layout to print directly to the screen and features.log
-#TIP: Change logging.INFO to logging.DEBUG to see the hidden calculations instantly!
+#Configure the logging layout to print directly to the screen and pipeline.log
 LOG_LEVEL = logging.INFO
 
 logging.basicConfig(
