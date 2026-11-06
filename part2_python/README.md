@@ -67,6 +67,7 @@ Step by Step Execution Sequence
 1. Before executing any .py file, under pipeline.py, in line 2, please change the csv\_filename location link to your own location that is storing the Metro\_Interstate\_Traffic\_Volume.csv
 
 
+
 2\. Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
 
 &#x20;  Step 2: Run feature\_engineering.py to use generated cleaned\_traffic\_data.csv in first step to generate engineered\_traffic\_features.csv.
@@ -84,32 +85,31 @@ Architecture Tracking \& Logging Configuration
 
 
 1. This project implements a professional, centralized logging structure via Python’s native logging library. To completely satisfy project constraints, it avoids root logging errors by instantiating module-isolated logger handles (logging.getLogger(\_\_name\_\_)) across every file component. All tasks write and append their logs directly into a single, consolidated file: pipeline.log.
-
 2. Logging Blueprint Formatter Layout
 
 &#x20;  Every log event across all operational scripts is tracked via this strict, explicit blueprint layout:
 
 &#x20;  %(asctime)s \[%(levelname)s] %(name)s: %(message)s
 
-&#x20;  Example Output:\* `2026-10-31 09:17:11 \[INFO] visualizations: Successfully saved figure 1...
+&#x20;  Example Output: 2026-10-31 09:17:11 \[INFO] visualizations: Successfully saved figure 1...
 
 
 
 3\. Meaningful Level Assignments Used
 
-&#x20;  DEBUG:   Fine-grained background variables and intermediate calculation values (such as mathematical min-max scaling constraints, Z-score standard deviation matrices, and  
+&#x20;  DEBUG:   Fine-grained background variables and intermediate calculation values (such as mathematical min-max scaling constraints, Z-score standard deviation matrices, and
 
-&#x20;           statistical quartile boundaries) useful exclusively for developer system auditing. These entries remain completely hidden unless the core logger level threshold is 
+&#x20;           statistical quartile boundaries) useful exclusively for developer system auditing. These entries remain completely hidden unless the core logger level threshold is
 
 &#x20;           explicitly dialed down to DEBUG.
 
 &#x20;  INFO:    Documents normal, expected structural pipeline milestones, processing checkpoints, data file loading successes, function completions, and visual figure export paths.
 
-&#x20;  WARNING: Tracks unpredicted but safely recoverable dataset anomalies, such as row deduplication extractions, unphysical 0 Kelvin temperature updates, or physically impossible 
+&#x20;  WARNING: Tracks unpredicted but safely recoverable dataset anomalies, such as row deduplication extractions, unphysical 0 Kelvin temperature updates, or physically impossible
 
 &#x20;           precipitation sensor overrides.
 
-&#x20;  ERROR:   Preserves critical runtime script failures or corrupted file inputs, mapping a clean system stack trace to the log file before executing a graceful shutdown hook to 
+&#x20;  ERROR:   Preserves critical runtime script failures or corrupted file inputs, mapping a clean system stack trace to the log file before executing a graceful shutdown hook to
 
 &#x20;           avoid a raw system crash.
 
@@ -122,8 +122,4 @@ Safe Terminal Execution Guard Rails
 
 
 1. Every user interactive function inside cli\_app.py is guarded by an ingestion data validator. If a user supplies a malformed input—such as typing alphabetic characters into a threshold block or keying a corrupted date format—the interface blocks an unhandled terminal crash, fires a clear ERROR log containing user entry variables into pipeline.log, and prints a dynamic assistance trace window displaying valid dataset ranges on screen.
-
-
-
-
 
