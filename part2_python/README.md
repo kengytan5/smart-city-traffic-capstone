@@ -34,9 +34,9 @@ part2\_python/
 
 ├── Metro\_Interstate\_Traffic\_Volume.csv                             #Source file for Task 1
 
-├── Part 2 - Executive Summary of Methodology and Findings.pdf      #1–2 Page Data Analytics Insights Report
+├── Part 2 - Executive Summary of Methodology and Findings.pdf      #1–2 summarising the methodology and findings 
 
-├── README.md                                                       #Comprehensive replication guide and system layout guide
+└── README.md                                                       #Comprehensive replication guide and system layout guide
 
 
 
