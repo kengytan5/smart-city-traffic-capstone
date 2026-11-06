@@ -18,25 +18,25 @@ Project Structure \& Component Breakdown
 
 part2\_python/
 
-├── cli\_app                                                         #Task 4: Interactive Command-Line Query Application Engine
+├── cli\_app                                                              #Task 4: Interactive Command-Line Query Application Engine
 
-├── feature\_engineering.py                                          #Task 2: Advanced Feature Generation \& Range Scaling Module
+├── feature\_engineering.py                                               #Task 2: Advanced Feature Generation \& Range Scaling Module
 
-├── figures                                                         #Visualization 1 to 6.png generated from Task 3
+├── figures                                                              #Visualization 1 to 6.png generated from Task 3
 
-├── pipeline.log                                                    #Unified chronological trail file of all pipeline events                                                                            ├── pipeline.py                                                     #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
+├── pipeline.log                                                         #Unified chronological trail file of all pipeline events                                                                            ├── pipeline.py                                                          #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
 
-├── visualizations.py                                               #Task 3: Six-Chart Automated Plotting Module
+├── visualizations.py                                                    #Task 3: Six-Chart Automated Plotting Module
 
-├── gitkeep.txt                                                     #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── cleaned\_traffic\_data.csv                                        #Intermediate processed dataset (Output of Task 1)
+├── gitkeep.txt                                                          #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
 
-├── engineered\_traffic\_features.csv                                 #Final ML-ready dataset (Output of Task 2), ready for Task 3 and 4
+├── engineered\_traffic\_features.csv                                      #Final ML-ready dataset (Output of Task 2), ready for Task 3 and 4
 
-├── Metro\_Interstate\_Traffic\_Volume.csv                             #Source file for Task 1
+├── Metro\_Interstate\_Traffic\_Volume.csv                                  #Source file for Task 1
 
-├── Part 2 - Executive Summary of Methodology and Findings.pdf      #1–2 summarising the methodology and findings 
+├── Part 2 - Executive Summary of Methodology and Findings Report.pdf    #1–2 summarising the methodology and findings
 
-└── README.md                                                       #Comprehensive replication guide and system layout guide
+└── README.md                                                            #Comprehensive replication guide and system layout guide
 
 
 
