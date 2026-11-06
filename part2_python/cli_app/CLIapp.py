@@ -33,18 +33,23 @@ def query_specific_datetime(target_str):
     """Command 1: Lookup weather, category, and density metrics for an exact hour."""
     logger.info(f"Command Invoked: datetime-lookup | Arguments: target_date='{target_str}'")
     try:
-        # Convert user string into true datetime object for query mapping
+        #Convert user string into true datetime object for query mapping
         parsed_target = pd.to_datetime(target_str)
         
         # Filter matching database records exactly
         record = df[df['date_time'] == parsed_target]
         
         if record.empty:
+            #Dynamically extract bounds to provide a helpful hint even if formatting was right but data is missing
+            min_date = df['date_time'].min().strftime('%Y-%m-%d %H:%M:%S')
+            max_date = df['date_time'].max().strftime('%Y-%m-%d %H:%M:%S')
+            
             print(f"\n[⚠️] No recorded sensor log found matching: {parsed_target}")
+            print(f"💡 Hint: Available historical data ranges from [{min_date}] to [{max_date}].")
             logger.info("Command Complete: Execution successful (Zero results returned)")
             return
         
-        # Pull one-hot category tracking safely without KeyError traps
+        #Pull one-hot category tracking safely without KeyError traps
         weather_cols = [col for col in record.columns if col.startswith('Weather_')]
         active_weather = "Unknown"
         for col in weather_cols:
@@ -64,7 +69,7 @@ def query_specific_datetime(target_str):
         logger.info("Command Complete: Operational database lookup finished successfully")
         
     except Exception:
-        # Fulfills mandate to report clean ERROR logs instead of raw traceback strings
+        #Fulfills mandate to report clean ERROR logs instead of raw traceback strings
         logger.error(f"Invalid Entry: The string '{target_str}' is malformed or invalid. Use YYYY-MM-DD HH:MM:00 layout.")
         print("\n[❌ Error] Datetime lookup failed. Please input a valid format (Example: 2017-05-15 08:00:00).")
 
@@ -87,7 +92,7 @@ def identify_high_traffic_periods(threshold=5500):
     print(f"📉 Total Gridlock Hours Found : {total_congested_hours} out of {df.shape[0]}")
     
     if total_congested_hours > 0:
-        # Aggregate patterns by day type and hour metrics
+        #Aggregate patterns by day type and hour metrics
         peak_hours = high_flow_records['Hour'].value_counts().head(3).index.tolist()
         print(f"⏰ Top 3 Most Congested Hours : {', '.join([f'{h:02d}:00' for h in peak_hours])}")
         
@@ -100,18 +105,18 @@ def compare_weekday_weekend_traffic():
     """Command 4: Compute and output comparative metrics between Weekdays and Weekends."""
     logger.info("Command Invoked: weekday-weekend-comparison | Arguments: None")
     
-    # 1. Isolate Weekday vs Weekend splits using our pre-engineered binary flag
+    #1. Isolate Weekday vs Weekend splits using our pre-engineered binary flag
     weekday_data = df[df['Is_Weekend'] == 0]
     weekend_data = df[df['Is_Weekend'] == 1]
     
-    # 2. Compute key continuous data metrics
+    #2. Compute key continuous data metrics
     avg_weekday = weekday_data['traffic_volume'].mean()
     avg_weekend = weekend_data['traffic_volume'].mean()
     
     max_weekday = weekday_data['traffic_volume'].max()
     max_weekend = weekend_data['traffic_volume'].max()
     
-    # 3. Calculate high congestion probability thresholds (>5500 vehicles)
+    #3. Calculate high congestion probability thresholds (>5500 vehicles)
     weekday_cong_prob = (weekday_data['traffic_volume'] > 5500).mean() * 100
     weekend_cong_prob = (weekend_data['traffic_volume'] > 5500).mean() * 100
     
@@ -132,10 +137,10 @@ def recommend_travel_periods():
     """Command 3: Calculate data-driven optimized commute scheduling frameworks."""
     logger.info("Command Invoked: optimize-commute | Arguments: None")
     
-    # Calculate baseline metrics isolating standard daylight operational loops (6 AM to 8 PM)
+    #Calculate baseline metrics isolating standard daylight operational loops (6 AM to 8 PM)
     daylight_df = df[(df['Hour'] >= 6) & (df['Hour'] <= 20)]
     
-    # Group by operational hour tracking indices to isolate minimum averages
+    #Group by operational hour tracking indices to isolate minimum averages
     hourly_means = daylight_df.groupby('Hour')['traffic_volume'].mean()
     best_daylight_hours = hourly_means.sort_values(ascending=True).head(3).index.tolist()
     
@@ -154,14 +159,14 @@ def recommend_travel_periods():
 
 def retrieve_weather_traffic_info(weather_query):
     """Command 5: Filter the master cache to find traffic volume metrics for a specific weather type."""
-    # Clean the input token string to match standard database storage layouts
+    #Clean the input token string to match standard database storage layouts
     clean_query = weather_query.strip().capitalize()
     logger.info(f"Command Invoked: weather-traffic-lookup | Arguments: query_term='{clean_query}'")
     
-    # Construct the one-hot variable string we generated in Task 2
+    #Construct the one-hot variable string we generated in Task 2
     target_column = f"Weather_{clean_query}"
     
-    # Look for the column inside the active data structure
+    #Look for the column inside the active data structure
     if target_column not in df.columns:
         logger.error(f"Invalid Entry: Weather category '{clean_query}' does not exist in dataset schema.")
         print(f"\n[❌ Error] Weather category '{clean_query}' not recognized.")
@@ -171,10 +176,10 @@ def retrieve_weather_traffic_info(weather_query):
         print(f"💡 Valid weather options are: {', '.join(valid_options)}")
         return
 
-    # Filter where the target one-hot condition is true (equals 1)
+    #Filter where the target one-hot condition is true (equals 1)
     weather_subset = df[df[target_column] == 1]
     
-    # Compute aggregates
+    #Compute aggregates
     mean_flow = weather_subset['traffic_volume'].mean()
     max_flow = weather_subset['traffic_volume'].max()
     sample_size = len(weather_subset)
