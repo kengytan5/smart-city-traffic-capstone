@@ -40,9 +40,9 @@ part3\_machine\_learning/
 
 │   ├── Apply\_an\_Advanced\_AI\_Technique.py                                            #Apply an Advanced AI Technique
 
-│   ├── MLOps\_and\_Deployment\_Simulation.py                                           #MLOps Serving: Flask API microservice \& real-time telemetry drift script
-
 │   ├── mlflow\_deployment\_registry.json                                              #Production Registry: Hardcopy versioned model tracking logs
+
+│   ├── MLOps\_and\_Deployment\_Simulation.py                                           #MLOps Serving: Flask API microservice \& real-time telemetry drift script
 
 │   └── pipeline.log                                                                 #Central Audit: Shared leveled trail file of all pipeline milestones
 
