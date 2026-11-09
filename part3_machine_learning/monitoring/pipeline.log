@@ -1,0 +1,198 @@
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Pipeline Engine Ready. Beginning sequential execution...
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Starting Execution: Data Loading
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Successfully loaded raw data file. Dimensions: 48204 rows, 9 columns.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Starting Execution: Schema Validation Validation.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Schema structural verification successful. All mandatory target features are present.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Starting Execution: Schema Validation Validation
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Schema structural verification successful. All mandatory target features are present.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Executing Cleaning Step: Parsing timestamps
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Datetime fields converted successfully. Operational 'Month' index generated.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Executing Cleaning Step: Deduplication
+2026-11-09 20:58:23 [WARNING] Task 1: Data Pipeline Construction: Deduplication Step: Dropped 17 exact duplicate rows from the dataset.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Executing Cleaning Step: Categorical Standardisation
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Categorical string tracking alignment completed
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Executing Cleaning Step: Temperature Outlier Assessment
+2026-11-09 20:58:23 [WARNING] Task 1: Data Pipeline Construction: Outlier Imputation: Modified 10 rows exhibiting 0 Kelvin anomalies. Substituted values with localized monthly medians.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Executing Cleaning Step: Rainfall Outlier Assessment
+2026-11-09 20:58:23 [WARNING] Task 1: Data Pipeline Construction: Outlier Imputation: Modified 1 rows exhibiting physically implausible precipitation totals. Values replaced using localized monthly median rainfall matrices.
+2026-11-09 20:58:23 [INFO] Task 1: Data Pipeline Construction: Pipeline execution finished successfully. Cleaned matrix saved to: cleaned_traffic_data.csv
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Feature Engineering Workspace Initialized. Ready for sequential steps...
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Starting Execution: Ingesting cleaned data
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Dataset shape BEFORE feature engineering: 48187 rows, 10 columns.
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Engineering temporal features and cyclical math transformations
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Time-based cyclical dimensions compiled successfully
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Executing categorical weather element encoding arrays
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Categorical one-hot matrices and environmental indices generated
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Executing continuous feature normalization (Min-Max & Standardisation)
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Continuous data ranges scaled for modeling compatibility
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Calculating empirical traffic volume data distribution metrics
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Dataset shape AFTER feature engineering: 48187 rows, 29 columns.
+2026-11-09 20:58:52 [INFO] Task 2: Feature Engineering: Feature engineering completed successfully! Final ML-ready file saved as: engineered_traffic_features.csv
+2026-11-09 20:59:19 [INFO] Task 3: Visualize Traffic Patterns: Visualisation Workspace Initialized. Ingesting features matrix...
+2026-11-09 20:59:19 [INFO] Task 3: Visualize Traffic Patterns: Data ingested successfully. Analytical plotting loops ready
+2026-11-09 20:59:19 [INFO] Task 3: Visualize Traffic Patterns: Generating Visualisation 1: Traffic demand by hour
+2026-11-09 20:59:19 [INFO] Task 3: Visualize Traffic Patterns: Successfully saved figure 1: traffic_demand_by_hour.png
+2026-11-09 20:59:19 [INFO] Task 3: Visualize Traffic Patterns: Generating Visualisation 2: Weekday vs. weekend traffic
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Successfully saved figure 2: weekday_vs_weekend_traffic.png
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Generating Visualisation 3: Traffic and weather relationships
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Successfully saved figure 3: traffic_weather_relationships.png
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Squall: 2061.75 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Fog: 2703.72 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Mist: 2933.34 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Thunderstorm: 2999.43 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Snow: 3016.32 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Clear: 3055.61 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Smoke: 3237.65 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Drizzle: 3292.19 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Rain: 3317.91 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Haze: 3502.10 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Calculated Baseline Metric - Clouds: 3617.99 vehicles/hour
+2026-11-09 20:59:20 [INFO] Task 3: Visualize Traffic Patterns: Generating Visualisation 4: Temperature vs. traffic
+2026-11-09 20:59:21 [INFO] Task 3: Visualize Traffic Patterns: Successfully saved figure 4: temperature_vs_traffic.png
+2026-11-09 20:59:21 [INFO] Task 3: Visualize Traffic Patterns: Generating Visualisation 5: Traffic Distribution
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: Successfully saved figure 5: traffic_distribution.png
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: Generating Visualisation 6: Congestion pattterns over time
+2026-11-09 20:59:22 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-09 20:59:22 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-09 20:59:22 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-09 20:59:22 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-09 20:59:22 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-09 20:59:22 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: Successfully saved figure 6: congestion_patterns_over_time.png
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: Execution completed successfully. All image files compiled
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: ====================================================
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: LAUNCHING AUTOMATED VISUALIZATION COMPILATION PHASE
+2026-11-09 20:59:22 [INFO] Task 3: Visualize Traffic Patterns: ====================================================
+2026-11-09 20:59:23 [INFO] Task 3: Visualize Traffic Patterns: Visualization engine executed successfully. Output artifacts ready.
+2026-11-09 20:59:23 [INFO] Task 3: Visualize Traffic Patterns: ====================================================
+2026-11-09 21:00:04 [INFO] Task 4: Build a Mini Traffic Analytics Application: Initializing Smart City CLI Application Workspace...
+2026-11-09 21:00:04 [INFO] Task 4: Build a Mini Traffic Analytics Application: Database fully loaded into CLI cache matrix. Row Count: 48187
+2026-11-09 21:00:13 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: datetime-lookup | Arguments: target_date='2010'
+2026-11-09 21:00:13 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Execution successful (Zero results returned)
+2026-11-09 21:00:20 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: datetime-lookup | Arguments: target_date='2020'
+2026-11-09 21:00:20 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Execution successful (Zero results returned)
+2026-11-09 21:00:36 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: datetime-lookup | Arguments: target_date='2016-10-01 15:00'
+2026-11-09 21:00:36 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Operational database lookup finished successfully
+2026-11-09 21:00:45 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: congestion-lookup | Arguments: threshold=6000
+2026-11-09 21:00:45 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Congestion analysis mapping loop successfully logged
+2026-11-09 21:00:53 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: congestion-lookup | Arguments: threshold=3000
+2026-11-09 21:00:53 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Congestion analysis mapping loop successfully logged
+2026-11-09 21:00:57 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: congestion-lookup | Arguments: threshold=-1
+2026-11-09 21:00:57 [ERROR] Task 4: Build a Mini Traffic Analytics Application: Invalid Entry: Out-of-bounds capacity metric supplied: -1
+2026-11-09 21:01:01 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: weekday-weekend-comparison | Arguments: None
+2026-11-09 21:01:01 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Weekday vs Weekend analytical matrix generated successfully
+2026-11-09 21:01:04 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: optimize-commute | Arguments: None
+2026-11-09 21:01:04 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Travel window recommendations generated successfully.
+2026-11-09 21:01:32 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: weather-traffic-lookup | Arguments: query_term='Rain'
+2026-11-09 21:01:32 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Weather conditions extraction complete for category 'Rain'.
+2026-11-09 21:01:38 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: weather-traffic-lookup | Arguments: query_term='Snow'
+2026-11-09 21:01:38 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Weather conditions extraction complete for category 'Snow'.
+2026-11-09 21:01:44 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: weather-traffic-lookup | Arguments: query_term='Ra'
+2026-11-09 21:01:45 [ERROR] Task 4: Build a Mini Traffic Analytics Application: Invalid Entry: Weather category 'Ra' does not exist in dataset schema.
+2026-11-09 21:01:49 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: optimize-commute | Arguments: None
+2026-11-09 21:01:49 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Travel window recommendations generated successfully.
+2026-11-09 21:02:01 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Invoked: weather-traffic-lookup | Arguments: query_term='Clouds'
+2026-11-09 21:02:01 [INFO] Task 4: Build a Mini Traffic Analytics Application: Command Complete: Weather conditions extraction complete for category 'Clouds'.
+2026-11-09 21:02:03 [INFO] Task 4: Build a Mini Traffic Analytics Application: User requested exit sequence. Shutting down CLI interactive application engine
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: ====================================================
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: STARTING PART 3: PROXY ACCIDENT-RISK LABEL
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: ====================================================
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: Successfully loaded feature data. Starting shape: (48187, 29)
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: Reconstructed 'weather_main' categorical variable from one-hot matrices.
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: Extracted Traffic Quartiles -> Q1: 1192, Median(Q2): 3379, Q3: 4933
+2026-11-09 21:02:27 [INFO] Part 3: Proxy accident-risk label: Successfully generated 4-tier 'congestion_category' targets
+2026-11-09 21:02:27 [WARNING] Part 3: Proxy accident-risk label: Proxy Generation Warning: Synthesized 9282 high-risk rows (19.26% of total hours) based on severe conditions constraint logic.
+2026-11-09 21:02:28 [INFO] Part 3: Proxy accident-risk label: Target dataset created successfully. Saved artifact as: ml_traffic_accident_proxy.csv
+2026-11-09 21:02:28 [INFO] Part 3: Proxy accident-risk label: ====================================================
+2026-11-09 21:03:03 [INFO] Supervised Machine Learning Models: ====================================================
+2026-11-09 21:03:03 [INFO] Supervised Machine Learning Models: LAUNCHING TASK 1: SUPERVISED MACHINE LEARNING MODELS
+2026-11-09 21:03:03 [INFO] Supervised Machine Learning Models: ====================================================
+2026-11-09 21:03:03 [INFO] Supervised Machine Learning Models: Successfully loaded dataset matrix. Shape: (48187, 33)
+2026-11-09 21:03:03 [INFO] Supervised Machine Learning Models: Feature set locked. Total features utilized: 21
+2026-11-09 21:03:03 [INFO] Supervised Machine Learning Models: Initializing Stage: Regression Modeling (Target: traffic_volume)
+2026-11-09 21:03:04 [INFO] Supervised Machine Learning Models: Regression Baseline (Linear Regression) -> MAE: 813.70, R²: 0.7257
+2026-11-09 21:03:04 [WARNING] Supervised Machine Learning Models: Regression Ensemble (Random Forest) -> MAE: 266.92, R²: 0.9466
+2026-11-09 21:03:04 [INFO] Supervised Machine Learning Models: Initializing Stage: Classification Modeling (Target: high_risk proxy)
+2026-11-09 21:03:05 [INFO] Supervised Machine Learning Models: Logistic Regression Outputs -> Accuracy: 0.9656 | Precision: 0.9024 | Recall: 0.9208 | F1-score: 0.9115 | ROC AUC: 0.9920
+2026-11-09 21:03:05 [INFO] Supervised Machine Learning Models: Random Forest Classifier Outputs -> Accuracy: 0.9825 | Precision: 0.9410 | Recall: 0.9698 | F1-score: 0.9552 | ROC AUC: 0.9974
+2026-11-09 21:03:05 [INFO] Supervised Machine Learning Models: ====================================================
+2026-11-09 21:03:05 [INFO] Supervised Machine Learning Models: SUPERVISED MODELING EVALUATION PHASE MASTER COMPLETED
+2026-11-09 21:03:05 [INFO] Supervised Machine Learning Models: ====================================================
+2026-11-09 21:03:37 [INFO] Unsupervised Machine Learning: ====================================================
+2026-11-09 21:03:37 [INFO] Unsupervised Machine Learning: LAUNCHING TASK 2: UNSUPERVISED MACHINE LEARNING WORKSPACE
+2026-11-09 21:03:37 [INFO] Unsupervised Machine Learning: ====================================================
+2026-11-09 21:03:37 [INFO] Unsupervised Machine Learning: Successfully loaded dataset cache. Shape: (48187, 33)
+2026-11-09 21:03:37 [INFO] Unsupervised Machine Learning: Initializing Unsupervised Stage: K-Means Clustering on Traffic Conditions
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Cluster 0 Profile -> Mean Hour: 3.0 | Mean Volume: 857 vehicles/hr | Weather Severity Index: 3.54
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Cluster 1 Profile -> Mean Hour: 15.1 | Mean Volume: 4259 vehicles/hr | Weather Severity Index: 1.70
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Cluster 2 Profile -> Mean Hour: 14.0 | Mean Volume: 4096 vehicles/hr | Weather Severity Index: 7.17
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Initializing Unsupervised Stage: Association Rule Mining (Apriori)
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Mined Rule Pattern found: ['Congestion_Level_Medium', 'Day_Type_Weekday', 'weather_main_Clouds'] -> ['Time_of_Day_Night_Late'] (Lift: 3.7914)
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Mined Rule Pattern found: ['weather_main_Clear', 'Day_Type_Weekday', 'Congestion_Level_Medium'] -> ['Time_of_Day_Night_Late'] (Lift: 3.7223)
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Mined Rule Pattern found: ['Time_of_Day_Night_Late', 'weather_main_Clouds'] -> ['Day_Type_Weekday', 'Congestion_Level_Medium'] (Lift: 3.6026)
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: Task 2: Unsupervised Machine Learning Pipeline execution successfully finalized.
+2026-11-09 21:03:42 [INFO] Unsupervised Machine Learning: ====================================================
+2026-11-09 21:04:16 [INFO] Deep Learning with Explainability: ====================================================
+2026-11-09 21:04:16 [INFO] Deep Learning with Explainability: LAUNCHING TASK 3: DEEP LEARNING WITH EXPLAINABILITY
+2026-11-09 21:04:16 [INFO] Deep Learning with Explainability: ====================================================
+2026-11-09 21:04:16 [INFO] Deep Learning with Explainability: Sequence matrices compiled. Train Shape: (38530, 24, 5) | Test Shape: (9633, 24, 5)
+2026-11-09 21:04:16 [INFO] Deep Learning with Explainability: Initializing Architecture: Building Multi-Layer Recurrent LSTM Model
+2026-11-09 21:04:16 [WARNING] tensorflow: TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-11-09 21:04:16 [INFO] Deep Learning with Explainability: Starting LSTM Network Training Fit Loop...
+2026-11-09 21:04:30 [INFO] Deep Learning with Explainability: LSTM Deep Learning Model Evaluation Complete -> Test Loss (MSE): 0.01006
+2026-11-09 21:04:30 [WARNING] Deep Learning with Explainability: LSTM Demand Prediction Performance Metric  -> True MAE: 502.56 vehicles
+2026-11-09 21:04:30 [INFO] Deep Learning with Explainability: Initializing Explainability Stage: Building Comparable Tree Model for SHAP Evaluation
+2026-11-09 21:04:31 [INFO] Deep Learning with Explainability: Calculating Shapley Additive exPlanations (TreeSHAP) matrices...
+2026-11-09 21:04:32 [INFO] Deep Learning with Explainability: Successfully saved explainability figure: shap_feature_importance.png
+2026-11-09 21:04:32 [INFO] Deep Learning with Explainability: Task 3: Deep Learning with Explainability execution finalized successfully.
+2026-11-09 21:04:32 [INFO] Deep Learning with Explainability: ====================================================
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: ==================================================================
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: LAUNCHING TASK 4: APPLY AN ADVANCED AI TECHNIQUE - MLFLOW & MLOPS
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: ==================================================================
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLOps database connection verified. Tracking server listening...
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow MLOps: Opened active tracking experiment run: 'Random_Forest_Traffic_Demand_Regression'
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> algorithm: RandomForestRegressor
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> n_estimators: 50
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> max_depth: 12
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> split_criterion: squared_error
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Performance Metric Logged -> Mean_Absolute_Error_MAE: 625.4000
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Performance Metric Logged -> R_Squared_Score: 0.8215
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Production Artifact Saved and Tracked: 'engineered_traffic_features.csv'
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow MLOps: Closed tracking run context successfully for 'Random_Forest_Traffic_Demand_Regression'.
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow MLOps: Opened active tracking experiment run: 'LSTM_Deep_Learning_Recurrent_Demand_Prediction'
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> algorithm: LSTM_Recurrent_Neural_Network
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> input_lookback_window_hours: 24
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> optimizer_engine: Adam
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Parameter Registered -> batch_size_limit: 128
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Performance Metric Logged -> Train_Loss_MSE: 0.0124
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Performance Metric Logged -> Validation_Loss_MSE: 0.0145
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow Production Artifact Saved and Tracked: 'shap_feature_importance.png'
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: MLflow MLOps: Closed tracking run context successfully for 'LSTM_Deep_Learning_Recurrent_Demand_Prediction'.
+2026-11-09 21:04:59 [WARNING] Apply an Advanced AI Technique - MLflow - MLOps: MLOps Governance Update: Compiled active experiments schema exported safely to: mlflow_model_registry.json
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: Task 4 Advanced AI Technique & MLOps system tracking finalized successfully.
+2026-11-09 21:04:59 [INFO] Apply an Advanced AI Technique - MLflow - MLOps: ====================================================
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: ========================================================
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: LAUNCHING TASK 5: BUILD A TRAFFIC RECOMMENDATION SYSTEM
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: ========================================================
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Recommendation engine operational cache connected successfully.
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Recommendation Engine Triggered | Constraints: Day_Type=Weekday, Weather=Rain
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Climate constraint matched: Isolate hours matching 'Rain' matrix.
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Recommendation output text compiled safely.
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Recommendation Engine Triggered | Constraints: Day_Type=Weekend, Weather=Clear
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Climate constraint matched: Isolate hours matching 'Clear' matrix.
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Recommendation output text compiled safely.
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: Task 5 Build a Traffic Recommendation System Engine pipeline executed successfully
+2026-11-09 21:05:27 [INFO] Build a Traffic Recommendation System: ====================================================
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: ==================================================
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: LAUNCHING TASK 6: MLOPS AND DEPLOYMENT SIMULATION
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: ==================================================
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: MLflow Experiment Tracking Server: Syncing active experiment spaces...
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: Registered Version Tracking -> Name: v1.0.0_Baseline | Algorithm: LinearRegression | R² Score: 0.1540
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: Registered Version Tracking -> Name: v2.0.0_Production_Champion | Algorithm: RandomForestRegressor | R² Score: 0.8215
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: Launching Automated Real-Time Drift Monitoring Telemetry Check...
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: MLOps Monitoring Cycle Executed. Health Assessment Verdict: ✅ PASS / Normal Baseline Operations
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: Launching Automated Real-Time Drift Monitoring Telemetry Check...
+2026-11-09 21:05:52 [WARNING] MLOps and Deployment Simulation: MLOps Monitoring Cycle Executed. Health Assessment Verdict: ⚠️ ALERT / Requires Immediate System Investigation
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: Task 6 MLOps and Deployment Simulation framework and monitoring simulation completed successfully.
+2026-11-09 21:05:52 [INFO] MLOps and Deployment Simulation: ====================================================
+2026-11-09 21:05:53 [INFO] numexpr.utils: NumExpr defaulting to 4 threads.
