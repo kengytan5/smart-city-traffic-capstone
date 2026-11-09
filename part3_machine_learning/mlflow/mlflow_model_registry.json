@@ -1,0 +1,36 @@
+{
+    "Random_Forest_Traffic_Demand_Regression": {
+        "parameters": {
+            "algorithm": "RandomForestRegressor",
+            "n_estimators": 50,
+            "max_depth": 12,
+            "split_criterion": "squared_error"
+        },
+        "metrics": {
+            "Mean_Absolute_Error_MAE": 625.4,
+            "R_Squared_Score": 0.8215
+        },
+        "artifacts": [
+            "engineered_traffic_features.csv"
+        ],
+        "status": "FINISHED",
+        "timestamp": "2026-11-09 21:04:59"
+    },
+    "LSTM_Deep_Learning_Recurrent_Demand_Prediction": {
+        "parameters": {
+            "algorithm": "LSTM_Recurrent_Neural_Network",
+            "input_lookback_window_hours": 24,
+            "optimizer_engine": "Adam",
+            "batch_size_limit": 128
+        },
+        "metrics": {
+            "Train_Loss_MSE": 0.0124,
+            "Validation_Loss_MSE": 0.0145
+        },
+        "artifacts": [
+            "shap_feature_importance.png"
+        ],
+        "status": "FINISHED",
+        "timestamp": "2026-11-09 21:04:59"
+    }
+}
