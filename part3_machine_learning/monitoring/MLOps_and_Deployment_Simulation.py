@@ -29,7 +29,7 @@ model_version_registry = {
         "experiment": "Traffic_Volume_Regression",
         "algorithm": "LinearRegression",
         "parameters": {"fit_intercept": True, "normalize": False},
-        "metrics": {"MAE_Vehicles": 1745.30, "R2_Score": 0.1540},
+        "metrics": {"MAE_Vehicles": 813.70, "R2_Score": 0.7257},
         "status": "Archived",
         "timestamp": "2026-10-31 10:15:22"
     },
@@ -37,7 +37,7 @@ model_version_registry = {
         "experiment": "Traffic_Volume_Regression",
         "algorithm": "RandomForestRegressor",
         "parameters": {"n_estimators": 50, "max_depth": 12, "random_state": 42},
-        "metrics": {"MAE_Vehicles": 625.40, "R2_Score": 0.8215},
+        "metrics": {"MAE_Vehicles": 266.92, "R2_Score": 0.9466},
         "status": "Active_Live",
         "timestamp": "2026-10-31 14:12:05"
     }
