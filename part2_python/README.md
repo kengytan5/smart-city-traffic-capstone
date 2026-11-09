@@ -6,13 +6,13 @@ AI, ML and Data Science Capstone Project
 
 
 
-Instructions for Part 2 - Python: Building a Reproducible Traffic Analytics Pipeline
+**Instructions for Part 2 - Python: Building a Reproducible Traffic Analytics Pipeline**
 
 
 
 
 
-Project Structure \& Component Breakdown
+**Project Structure \& Component Breakdown**
 
 
 
@@ -22,9 +22,33 @@ part2\_python/
 
 ├── feature\_engineering.py                                               #Task 2: Advanced Feature Generation \& Range Scaling Module
 
-├── figures                                                              #Visualization 1 to 6.png generated from Task 3
+├── figures
 
-├── pipeline.log                                                         #Unified chronological trail file of all pipeline events                                                                            ├── pipeline.py                                                          #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
+│   ├── congestion\_patterns\_over\_time.png                                #Task 3 Visualisation 6
+
+│   ├── temperature\_vs\_traffic.png                                       #Task 3 Visualisation 4
+
+│   ├── traffic\_demand\_by\_hour.png                                       #Task 3 Visualisation 1
+
+│   ├── traffic\_distribution.png                                         #Task 3 Visualisation 5
+
+│   ├── traffic\_weather\_relationships.png                                #Task 3 Visualisation 3
+
+│   └── weekday\_vs\_weekend\_traffic.png                                   #Task 3 Visualisation 2
+
+├── notebooks/
+
+│   ├── Assignment 33 Part 2 - Task 1.ipynb                              #Task 1
+
+│   ├── Assignment 33 Part 2 - Task 2.ipynb                              #Task 2
+
+│   ├── Assignment 33 Part 2 - Task 3.ipynb                              #Task 3
+
+│   └── Assignment 33 Part 2 - Task 4.ipynb                              #Task 4
+
+├── pipeline.log                                                         #Unified chronological trail file of all pipeline events
+
+├── pipeline.py                                                          #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
 
 ├── visualizations.py                                                    #Task 3: Six-Chart Automated Plotting Module
 
@@ -42,25 +66,7 @@ part2\_python/
 
 
 
-figures/
-
-├── congestion\_patterns\_over\_time.png      #Task 3 Visualisation 6
-
-├── temperature\_vs\_traffic.png             #Task 3 Visualisation 4
-
-├── traffic\_demand\_by\_hour.png             #Task 3 Visualisation 1
-
-├── traffic\_distribution.png               #Task 3 Visualisation 5
-
-├── traffic\_weather\_relationships.png      #Task 3 Visualisation 3
-
-└── weekday\_vs\_weekend\_traffic.png         #Task 3 Visualisation 2
-
-
-
-
-
-Step by Step Execution Sequence
+**Step by Step Execution Sequence**
 
 
 
@@ -70,17 +76,17 @@ Step by Step Execution Sequence
 
 2\. Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
 
-&#x20;  Step 2: Run feature\_engineering.py to use generated cleaned\_traffic\_data.csv in first step to generate engineered\_traffic\_features.csv.
+&#x20;  Step 2: Run feature\_engineering.py to use generated cleaned\_traffic\_data.csv in Step 1 to generate engineered\_traffic\_features.csv.
 
-&#x20;  Step 3: Run visualizations.py that is using engineered\_traffic\_features.csv generated in second step.
+&#x20;  Step 3: Run visualizations.py that is using engineered\_traffic\_features.csv generated in Step 2.
 
-&#x20;  Step 4: Run CLIapp.py that is using engineered\_traffic\_features.csv generated in second step.
-
-
+&#x20;  Step 4: Run CLIapp.py that is using engineered\_traffic\_features.csv generated in Step 2.
 
 
 
-Architecture Tracking \& Logging Configuration
+
+
+**Architecture Tracking \& Logging Configuration**
 
 
 
@@ -117,7 +123,7 @@ Architecture Tracking \& Logging Configuration
 
 
 
-Safe Terminal Execution Guard Rails
+**Safe Terminal Execution Guard Rails**
 
 
 
