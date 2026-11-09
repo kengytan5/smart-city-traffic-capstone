@@ -74,6 +74,8 @@ part3\_machine\_learning/
 
 ├── README.md                                                                        #Comprehensive replication guide and system layout guide
 
+├── Task 2 \& 4 Report Findings.pdf                                                   #Discussion on Task 2 \& 4 Findings
+
 └── Task 7 - Responsible and Sustainable AI.pdf                                      #Responsible and Sustainable AI Report
 
 
