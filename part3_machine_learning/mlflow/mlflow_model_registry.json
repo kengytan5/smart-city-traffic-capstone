@@ -7,14 +7,14 @@
             "split_criterion": "squared_error"
         },
         "metrics": {
-            "Mean_Absolute_Error_MAE": 625.4,
-            "R_Squared_Score": 0.8215
+            "Mean_Absolute_Error_MAE": 266.92,
+            "R_Squared_Score": 0.9466
         },
         "artifacts": [
             "engineered_traffic_features.csv"
         ],
         "status": "FINISHED",
-        "timestamp": "2026-11-09 21:04:59"
+        "timestamp": "2026-11-09 22:18:20"
     },
     "LSTM_Deep_Learning_Recurrent_Demand_Prediction": {
         "parameters": {
@@ -24,13 +24,13 @@
             "batch_size_limit": 128
         },
         "metrics": {
-            "Train_Loss_MSE": 0.0124,
-            "Validation_Loss_MSE": 0.0145
+            "Train_Loss_MSE": 0.0091,
+            "True_MAE_Vehicles": 484.61
         },
         "artifacts": [
             "shap_feature_importance.png"
         ],
         "status": "FINISHED",
-        "timestamp": "2026-11-09 21:04:59"
+        "timestamp": "2026-11-09 22:18:20"
     }
 }
