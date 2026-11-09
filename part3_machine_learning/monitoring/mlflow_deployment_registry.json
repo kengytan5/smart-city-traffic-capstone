@@ -7,8 +7,8 @@
             "normalize": false
         },
         "metrics": {
-            "MAE_Vehicles": 1745.3,
-            "R2_Score": 0.154
+            "MAE_Vehicles": 813.7,
+            "R2_Score": 0.7257
         },
         "status": "Archived",
         "timestamp": "2026-10-31 10:15:22"
@@ -22,8 +22,8 @@
             "random_state": 42
         },
         "metrics": {
-            "MAE_Vehicles": 625.4,
-            "R2_Score": 0.8215
+            "MAE_Vehicles": 266.92,
+            "R2_Score": 0.9466
         },
         "status": "Active_Live",
         "timestamp": "2026-10-31 14:12:05"
