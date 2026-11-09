@@ -104,8 +104,8 @@ mlflow.log_param("optimizer_engine", "Adam")
 mlflow.log_param("batch_size_limit", 128)
 
 #Log evaluation metrics compiled in Task 3
-mlflow.log_metric("Train_Loss_MSE", 0.01006)
-mlflow.log_metric("True_MAE_Vehicles", 502.56)
+mlflow.log_metric("Train_Loss_MSE", 0.00911)
+mlflow.log_metric("True_MAE_Vehicles", 484.61)
 
 mlflow.log_artifact("shap_feature_importance.png")
 mlflow.end_run()
