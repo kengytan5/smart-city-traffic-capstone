@@ -84,8 +84,8 @@ mlflow.log_param("max_depth", 12)
 mlflow.log_param("split_criterion", "squared_error")
 
 #Log performance evaluation metrics derived in Task 1
-mlflow.log_metric("Mean_Absolute_Error_MAE", 625.4000)
-mlflow.log_metric("R_Squared_Score", 0.8215)
+mlflow.log_metric("Mean_Absolute_Error_MAE", 266.92)
+mlflow.log_metric("R_Squared_Score", 0.9466)
 
 #Track the output binary data artifact path
 mlflow.log_artifact("engineered_traffic_features.csv")
@@ -104,8 +104,8 @@ mlflow.log_param("optimizer_engine", "Adam")
 mlflow.log_param("batch_size_limit", 128)
 
 #Log evaluation metrics compiled in Task 3
-mlflow.log_metric("Train_Loss_MSE", 0.0124)
-mlflow.log_metric("Validation_Loss_MSE", 0.0145)
+mlflow.log_metric("Train_Loss_MSE", 0.01006)
+mlflow.log_metric("True_MAE_Vehicles", 502.56)
 
 mlflow.log_artifact("shap_feature_importance.png")
 mlflow.end_run()
