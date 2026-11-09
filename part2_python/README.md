@@ -18,11 +18,11 @@ AI, ML and Data Science Capstone Project
 
 part2\_python/
 
-├── cli\_app                                                              
+├── cli\_app
 
 │   ├── CLIapp.py                                                        #Task 4: Interactive Command-Line Query Application Engine
 
-├── feature\_engineering                                              
+├── feature\_engineering
 
 │   ├── feature\_engineering.py                                           #Task 2: Advanced Feature Generation \& Range Scaling Module
 
@@ -50,19 +50,19 @@ part2\_python/
 
 │   └── Assignment 33 Part 2 - Task 4.ipynb                              #Task 4
 
-├── pipeline                                                         
+├── pipeline
 
 │   ├── pipeline.py                                                      #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
 
-├── pipeline.log                                                         
+├── pipeline.log
 
 │   ├── pipeline.log                                                     #Unified chronological trail file of all pipeline events
 
-├── visualizations                                                   
+├── visualizations
 
 │   ├── visualizations.py                                                #Task 3: Six-Chart Automated Plotting Module
 
-├── gitkeep.txt                                                          #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
+├── .gitkeep.txt                                                          #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
 
 ├── engineered\_traffic\_features.csv                                      #Final ML-ready dataset (Output of Task 2), ready for Task 3 and 4
 
