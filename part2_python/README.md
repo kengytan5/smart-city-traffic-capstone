@@ -20,11 +20,11 @@ part2\_python/
 
 ├── cli\_app
 
-│   ├── CLIapp.py                                                        #Task 4: Interactive Command-Line Query Application Engine
+│   └── CLIapp.py                                                        #Task 4: Interactive Command-Line Query Application Engine
 
 ├── feature\_engineering
 
-│   ├── feature\_engineering.py                                           #Task 2: Advanced Feature Generation \& Range Scaling Module
+│   └── feature\_engineering.py                                           #Task 2: Advanced Feature Generation \& Range Scaling Module
 
 ├── figures
 
@@ -52,15 +52,15 @@ part2\_python/
 
 ├── pipeline
 
-│   ├── pipeline.py                                                      #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
+│   └── pipeline.py                                                      #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
 
 ├── pipeline.log
 
-│   ├── pipeline.log                                                     #Unified chronological trail file of all pipeline events
+│   └── pipeline.log                                                     #Unified chronological trail file of all pipeline events
 
 ├── visualizations
 
-│   ├── visualizations.py                                                #Task 3: Six-Chart Automated Plotting Module
+│   └── visualizations.py                                                #Task 3: Six-Chart Automated Plotting Module
 
 ├── .gitkeep.txt                                                          #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
 
