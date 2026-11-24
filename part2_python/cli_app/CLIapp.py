@@ -15,8 +15,12 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Task 4: Build a Mini Traffic Analytics Application")
+logger = logging.getLogger(__name__)
 data_source = "engineered_traffic_features.csv"
+
+logger.info("====================================================================")
+logger.info("STARTING PART 2: TASK 4 - BUILD A MINI TRAFFIC ANALYTICS APPLICATION")
+logger.info("====================================================================")
 
 logger.info("Initializing Smart City CLI Application Workspace...")
 
@@ -239,7 +243,8 @@ while True:
         
     elif user_choice == '6':
         logger.info("User requested exit sequence. Shutting down CLI interactive application engine")
-        print("\nClosing workspace database cache connection. Goodbye!")
+        logger.info("====================================================\n\n\n")
+        print("Closing workspace database cache connection. Goodbye!")
         break
         
     else:
