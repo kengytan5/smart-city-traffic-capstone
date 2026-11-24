@@ -16,8 +16,12 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Task 3: Visualize Traffic Patterns")
+logger = logging.getLogger(__name__)
 input_file = "engineered_traffic_features.csv"
+
+logger.info("====================================================")
+logger.info("STARTING PART 2: TASK 3 - VISUALIZE TRAFFIC PATTERNS")
+logger.info("====================================================")
 
 logger.info("Visualisation Workspace Initialized. Ingesting features matrix...")
 
@@ -220,7 +224,7 @@ def main():
     generate_visualizations(df)
     
     logger.info("Visualization engine executed successfully. Output artifacts ready.")
-    logger.info("====================================================")
+    logger.info("====================================================\n\n\n")
 
 
 if __name__ == "__main__":
