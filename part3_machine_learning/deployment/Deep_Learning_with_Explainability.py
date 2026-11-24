@@ -23,12 +23,13 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Deep Learning with Explainability")
+logger = logging.getLogger(__name__)
+
 data_source = "ml_traffic_accident_proxy.csv"
 
-logger.info("====================================================")
-logger.info("LAUNCHING TASK 3: DEEP LEARNING WITH EXPLAINABILITY")
-logger.info("====================================================")
+logger.info("============================================================")
+logger.info("LAUNCHING PART 3: TASK 3 - DEEP LEARNING WITH EXPLAINABILITY")
+logger.info("============================================================")
 
 if not os.path.exists(data_source):
     logger.error(f"Inbound Data Source Error: {data_source} missing. Execute Proxy_accident-risk_label.py first.")
@@ -123,4 +124,4 @@ plt.close()
 
 logger.info(f"Successfully saved explainability figure: {shap_plot_path}")
 logger.info("Task 3: Deep Learning with Explainability execution finalized successfully.")
-logger.info("====================================================")
+logger.info("====================================================\n\n\n")
