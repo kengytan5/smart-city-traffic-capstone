@@ -25,12 +25,13 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Supervised Machine Learning Models")
+logger = logging.getLogger(__name__)
+
 data_source = "ml_traffic_accident_proxy.csv"
 
-logger.info("====================================================")
-logger.info("LAUNCHING TASK 1: SUPERVISED MACHINE LEARNING MODELS")
-logger.info("====================================================")
+logger.info("=============================================================")
+logger.info("LAUNCHING PART 3: TASK 1 - SUPERVISED MACHINE LEARNING MODELS")
+logger.info("=============================================================")
 
 #--------------------------------------------------------------------
 #2. DATA INGESTION & FEATURE ENGINEERING MAPS
@@ -136,6 +137,5 @@ for model_name, m_list in metrics.items():
         f"Recall: {m_list[2]:.4f} | F1-score: {m_list[3]:.4f} | ROC AUC: {m_list[4]:.4f}"
     )
 
-logger.info("====================================================")
-logger.info("SUPERVISED MODELING EVALUATION PHASE MASTER COMPLETED")
-logger.info("====================================================")
+logger.info("Task 1: Supervised Machine Learning Pipeline execution successfully finalized.")
+logger.info("====================================================\n\n\n")
