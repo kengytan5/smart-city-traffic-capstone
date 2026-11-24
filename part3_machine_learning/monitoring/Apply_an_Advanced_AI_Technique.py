@@ -17,12 +17,13 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Apply an Advanced AI Technique - MLflow - MLOps")
+logger = logging.getLogger(__name__)
+
 data_source = "ml_traffic_accident_proxy.csv"
 
-logger.info("==================================================================")
-logger.info("LAUNCHING TASK 4: APPLY AN ADVANCED AI TECHNIQUE - MLFLOW & MLOPS")
-logger.info("==================================================================")
+logger.info("==========================================================================")
+logger.info("LAUNCHING PART 3: TASK 4 - APPLY AN ADVANCED AI TECHNIQUE - MLFLOW & MLOPS")
+logger.info("==========================================================================")
 
 if not os.path.exists(data_source):
     logger.error(f"Inbound Data Source Error: {data_source} missing. Execute Proxy_accident-risk_label.py first.")
@@ -118,5 +119,5 @@ with open(registry_file, "w") as f:
     json.dump(mlflow.experiment_registry, f, indent=4) # Fixed NameError typo
 
 logger.warning(f"MLOps Governance Update: Compiled active experiments schema exported safely to: {registry_file}")
-logger.info("Task 4 Advanced AI Technique & MLOps system tracking finalized successfully.")
-logger.info("====================================================")
+logger.info("Task 4: Advanced AI Technique & MLOps system tracking finalized successfully.")
+logger.info("====================================================\n\n\n")
