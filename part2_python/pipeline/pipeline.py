@@ -15,8 +15,7 @@ logging.basicConfig(
     ]
 )
 
-#Instantiate our custom module logger
-logger = logging.getLogger("Task 1: Data Pipeline Construction")
+logger = logging.getLogger(__name__)
 
 #Define the file configuration baseline
 csv_filename = r'C:\Users\kw\OneDrive\NUSSOC\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility\Part 2\Metro_Interstate_Traffic_Volume.csv'
@@ -25,6 +24,10 @@ EXPECTED_COLUMNS = [
     'clouds_all', 'weather_main', 'weather_description', 
     'date_time', 'traffic_volume'
 ]
+
+logger.info("====================================================")
+logger.info("STARTING PART 2: TASK 1 - DATA PIPELINE CONSTRUCTION")
+logger.info("====================================================")
 
 logger.info("Pipeline Engine Ready. Beginning sequential execution...")
 
@@ -130,4 +133,4 @@ output_filename = "cleaned_traffic_data.csv"
 df.to_csv(output_filename, index=False)
 
 logger.info(f"Pipeline execution finished successfully. Cleaned matrix saved to: {output_filename}")
-
+logger.info("====================================================\n\n\n")
