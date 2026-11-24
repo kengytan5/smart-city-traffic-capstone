@@ -15,12 +15,13 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Build a Traffic Recommendation System")
+logger = logging.getLogger(__name__)
+
 data_source = "ml_traffic_accident_proxy.csv"
 
-logger.info("========================================================")
-logger.info("LAUNCHING TASK 5: BUILD A TRAFFIC RECOMMENDATION SYSTEM")
-logger.info("========================================================")
+logger.info("================================================================")
+logger.info("LAUNCHING PART 3: TASK 5 - BUILD A TRAFFIC RECOMMENDATION SYSTEM")
+logger.info("================================================================")
 
 if not os.path.exists(data_source):
     logger.error(f"Inbound Data Source Error: {data_source} missing. Execute Proxy_accident-risk_label.py first.")
@@ -109,5 +110,5 @@ rec2 = generate_traffic_recommendation(is_weekend_input=1, weather_condition_inp
 print(rec2)
 print("="*80 + "\n")
 
-logger.info("Task 5 Build a Traffic Recommendation System Engine pipeline executed successfully")
-logger.info("====================================================")
+logger.info("Task 5: Build a Traffic Recommendation System Engine pipeline executed successfully")
+logger.info("====================================================\n\n\n")
