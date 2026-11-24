@@ -16,10 +16,11 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("MLOps and Deployment Simulation")
-logger.info("==================================================")
-logger.info("LAUNCHING TASK 6: MLOPS AND DEPLOYMENT SIMULATION")
-logger.info("==================================================")
+logger = logging.getLogger(__name__)
+
+logger.info("==========================================================")
+logger.info("LAUNCHING PART 3: TASK 6 - MLOPS AND DEPLOYMENT SIMULATION")
+logger.info("==========================================================")
 
 #=====================================================================
 #6.1 & 6.2 MODEL VERSIONING & EXPERIMENT TRACKING (MLFLOW METADATA)
@@ -143,5 +144,5 @@ run_telemetry_drift_monitoring_simulation(current_mean_temp=282.10, observed_err
 #Scenario B: Critical Predictive Performance Degradation (Triggers System ALERT)
 run_telemetry_drift_monitoring_simulation(current_mean_temp=280.50, observed_error_rate=1240.85)
 
-logger.info("Task 6 MLOps and Deployment Simulation framework and monitoring simulation completed successfully.")
-logger.info("====================================================")
+logger.info("Task 6: MLOps and Deployment Simulation framework and monitoring simulation completed successfully.")
+logger.info("====================================================\n\n\n")
