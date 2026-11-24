@@ -18,12 +18,13 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Unsupervised Machine Learning")
+logger = logging.getLogger(__name__)
+
 data_source = "ml_traffic_accident_proxy.csv"
 
-logger.info("====================================================")
-logger.info("LAUNCHING TASK 2: UNSUPERVISED MACHINE LEARNING WORKSPACE")
-logger.info("====================================================")
+logger.info("==================================================================")
+logger.info("LAUNCHING PART 3: TASK 2 - UNSUPERVISED MACHINE LEARNING WORKSPACE")
+logger.info("==================================================================")
 
 if not os.path.exists(data_source):
     logger.error(f"Inbound Data Source Error: {data_source} missing. Execute Proxy_accident-risk_label.py first.")
@@ -102,4 +103,4 @@ for idx, row in highest_lift_rules.iterrows():
 
 print("="*70)
 logger.info("Task 2: Unsupervised Machine Learning Pipeline execution successfully finalized.")
-logger.info("====================================================")
+logger.info("====================================================\n\n\n")
