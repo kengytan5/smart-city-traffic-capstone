@@ -17,10 +17,14 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Task 2: Feature Engineering")
+logger = logging.getLogger(__name__)
 
 input_file = "cleaned_traffic_data.csv"
 output_file = "engineered_traffic_features.csv"
+
+logger.info("=============================================")
+logger.info("STARTING PART 2: TASK 2 - FEATURE ENGINEERING")
+logger.info("=============================================")
 
 logger.info("Feature Engineering Workspace Initialized. Ready for sequential steps...")
 
@@ -121,4 +125,4 @@ logger.info(f"Dataset shape AFTER feature engineering: {final_rows} rows, {final
 #Export final processed matrix
 df_encoded.to_csv(output_file, index=False)
 logger.info(f"Feature engineering completed successfully! Final ML-ready file saved as: {output_file}")
-
+logger.info("====================================================\n\n\n")
