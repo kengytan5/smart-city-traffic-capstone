@@ -15,13 +15,14 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Part 3: Proxy accident-risk label")
+logger = logging.getLogger(__name__)
+
 input_file = "engineered_traffic_features.csv"
 output_file = "ml_traffic_accident_proxy.csv"
 
-logger.info("====================================================")
+logger.info("==========================================")
 logger.info("STARTING PART 3: PROXY ACCIDENT-RISK LABEL")
-logger.info("====================================================")
+logger.info("==========================================")
 
 #1. Ingest Feature Matrix from Part 2
 if not os.path.exists(input_file):
@@ -89,5 +90,5 @@ logger.warning(
 #Save final machine learning modeling dataset
 df.to_csv(output_file, index=False)
 logger.info(f"Target dataset created successfully. Saved artifact as: {output_file}")
-logger.info("====================================================")
+logger.info("====================================================\n\n\n")
 
