@@ -1,99 +1,105 @@
-2026-11-26 20:06:17 [INFO] __main__: ====================================================
-2026-11-26 20:06:17 [INFO] __main__: STARTING PART 2: TASK 1 - DATA PIPELINE CONSTRUCTION
-2026-11-26 20:06:17 [INFO] __main__: ====================================================
-2026-11-26 20:06:17 [INFO] __main__: Pipeline Engine Ready. Beginning sequential execution...
-2026-11-26 20:06:17 [INFO] __main__: Starting Execution: Data Loading
-2026-11-26 20:06:17 [INFO] __main__: Successfully loaded raw data file. Dimensions: 48204 rows, 9 columns.
-2026-11-26 20:06:17 [INFO] __main__: Starting Execution: Schema Validation Validation
-2026-11-26 20:06:17 [INFO] __main__: Schema structural verification successful. All mandatory target features are present.
-2026-11-26 20:06:17 [INFO] __main__: Executing Cleaning Step: Parsing timestamps
-2026-11-26 20:06:17 [INFO] __main__: Datetime fields converted successfully. Operational 'Month' index generated.
-2026-11-26 20:06:17 [INFO] __main__: Executing Cleaning Step: Deduplication
-2026-11-26 20:06:18 [WARNING] __main__: Deduplication Step: Dropped 17 exact duplicate rows from the dataset.
-2026-11-26 20:06:18 [INFO] __main__: Executing Cleaning Step: Categorical Standardisation
-2026-11-26 20:06:18 [INFO] __main__: Categorical string tracking alignment completed
-2026-11-26 20:06:18 [INFO] __main__: Executing Cleaning Step: Temperature Outlier Assessment
-2026-11-26 20:06:18 [WARNING] __main__: Outlier Imputation: Modified 10 rows exhibiting 0 Kelvin anomalies. Substituted values with localized monthly medians.
-2026-11-26 20:06:18 [INFO] __main__: Executing Cleaning Step: Rainfall Outlier Assessment
-2026-11-26 20:06:18 [WARNING] __main__: Outlier Imputation: Modified 1 rows exhibiting physically implausible precipitation totals. Values replaced using localized monthly median rainfall matrices.
-2026-11-26 20:06:18 [INFO] __main__: Pipeline execution finished successfully. Cleaned matrix saved to: cleaned_traffic_data.csv
-2026-11-26 20:06:18 [INFO] __main__: ====================================================
+2026-11-24 23:59:14 [INFO] __main__: ====================================================
+2026-11-24 23:59:14 [INFO] __main__: STARTING PART 2: TASK 1 - DATA PIPELINE CONSTRUCTION
+2026-11-24 23:59:14 [INFO] __main__: ====================================================
+2026-11-24 23:59:14 [INFO] __main__: Pipeline Engine Ready. Beginning sequential execution...
+2026-11-24 23:59:14 [INFO] __main__: Starting Execution: Data Loading
+2026-11-24 23:59:15 [INFO] __main__: Successfully loaded raw data file. Dimensions: 48204 rows, 9 columns.
+2026-11-24 23:59:15 [INFO] __main__: Starting Execution: Schema Validation Validation
+2026-11-24 23:59:15 [INFO] __main__: Schema structural verification successful. All mandatory target features are present.
+2026-11-24 23:59:15 [INFO] __main__: Executing Cleaning Step: Parsing timestamps
+2026-11-24 23:59:15 [INFO] __main__: Datetime fields converted successfully. Operational 'Month' index generated.
+2026-11-24 23:59:15 [INFO] __main__: Executing Cleaning Step: Deduplication
+2026-11-24 23:59:15 [WARNING] __main__: Deduplication Step: Dropped 17 exact duplicate rows from the dataset.
+2026-11-24 23:59:15 [INFO] __main__: Executing Cleaning Step: Categorical Standardisation
+2026-11-24 23:59:15 [INFO] __main__: Categorical string tracking alignment completed
+2026-11-24 23:59:15 [INFO] __main__: Executing Cleaning Step: Temperature Outlier Assessment
+2026-11-24 23:59:15 [WARNING] __main__: Outlier Imputation: Modified 10 rows exhibiting 0 Kelvin anomalies. Substituted values with localized monthly medians.
+2026-11-24 23:59:15 [INFO] __main__: Executing Cleaning Step: Rainfall Outlier Assessment
+2026-11-24 23:59:15 [WARNING] __main__: Outlier Imputation: Modified 1 rows exhibiting physically implausible precipitation totals. Values replaced using localized monthly median rainfall matrices.
+2026-11-24 23:59:15 [INFO] __main__: Pipeline execution finished successfully. Cleaned matrix saved to: cleaned_traffic_data.csv
+2026-11-24 23:59:15 [INFO] __main__: ====================================================
 
 
 
-2026-11-26 20:06:41 [INFO] __main__: =============================================
-2026-11-26 20:06:41 [INFO] __main__: STARTING PART 2: TASK 2 - FEATURE ENGINEERING
-2026-11-26 20:06:41 [INFO] __main__: =============================================
-2026-11-26 20:06:41 [INFO] __main__: Feature Engineering Workspace Initialized. Ready for sequential steps...
-2026-11-26 20:06:41 [INFO] __main__: Starting Execution: Ingesting cleaned data
-2026-11-26 20:06:41 [INFO] __main__: Dataset shape BEFORE feature engineering: 48187 rows, 10 columns.
-2026-11-26 20:06:41 [INFO] __main__: Engineering temporal features and cyclical math transformations
-2026-11-26 20:06:41 [INFO] __main__: Time-based cyclical dimensions compiled successfully
-2026-11-26 20:06:41 [INFO] __main__: Executing categorical weather element encoding arrays
-2026-11-26 20:06:41 [INFO] __main__: Categorical one-hot matrices and environmental indices generated
-2026-11-26 20:06:41 [INFO] __main__: Executing continuous feature normalization (Min-Max & Standardisation)
-2026-11-26 20:06:41 [INFO] __main__: Continuous data ranges scaled for modeling compatibility
-2026-11-26 20:06:41 [INFO] __main__: Calculating empirical traffic volume data distribution metrics
-2026-11-26 20:06:41 [INFO] __main__: Dataset shape AFTER feature engineering: 48187 rows, 29 columns.
-2026-11-26 20:06:42 [INFO] __main__: Feature engineering completed successfully! Final ML-ready file saved as: engineered_traffic_features.csv
-2026-11-26 20:06:42 [INFO] __main__: ====================================================
+2026-11-24 23:59:31 [INFO] __main__: =============================================
+2026-11-24 23:59:31 [INFO] __main__: STARTING PART 2: TASK 2 - FEATURE ENGINEERING
+2026-11-24 23:59:31 [INFO] __main__: =============================================
+2026-11-24 23:59:31 [INFO] __main__: Feature Engineering Workspace Initialized. Ready for sequential steps...
+2026-11-24 23:59:31 [INFO] __main__: Starting Execution: Ingesting cleaned data
+2026-11-24 23:59:31 [INFO] __main__: Dataset shape BEFORE feature engineering: 48187 rows, 10 columns.
+2026-11-24 23:59:31 [INFO] __main__: Engineering temporal features and cyclical math transformations
+2026-11-24 23:59:31 [INFO] __main__: Time-based cyclical dimensions compiled successfully
+2026-11-24 23:59:31 [INFO] __main__: Executing categorical weather element encoding arrays
+2026-11-24 23:59:31 [INFO] __main__: Categorical one-hot matrices and environmental indices generated
+2026-11-24 23:59:31 [INFO] __main__: Executing continuous feature normalization (Min-Max & Standardisation)
+2026-11-24 23:59:31 [INFO] __main__: Continuous data ranges scaled for modeling compatibility
+2026-11-24 23:59:31 [INFO] __main__: Calculating empirical traffic volume data distribution metrics
+2026-11-24 23:59:31 [INFO] __main__: Dataset shape AFTER feature engineering: 48187 rows, 29 columns.
+2026-11-24 23:59:31 [INFO] __main__: Feature engineering completed successfully! Final ML-ready file saved as: engineered_traffic_features.csv
+2026-11-24 23:59:31 [INFO] __main__: ====================================================
 
 
 
-2026-11-26 20:06:54 [INFO] __main__: ====================================================
-2026-11-26 20:06:54 [INFO] __main__: STARTING PART 2: TASK 3 - VISUALIZE TRAFFIC PATTERNS
-2026-11-26 20:06:54 [INFO] __main__: ====================================================
-2026-11-26 20:06:54 [INFO] __main__: Visualisation Workspace Initialized. Ingesting features matrix...
-2026-11-26 20:06:54 [INFO] __main__: Data ingested successfully. Analytical plotting loops ready
-2026-11-26 20:06:54 [INFO] __main__: Generating Visualisation 1: Traffic demand by hour
-2026-11-26 20:06:56 [INFO] __main__: Successfully saved figure 1: traffic_demand_by_hour.png
-2026-11-26 20:06:56 [INFO] __main__: Generating Visualisation 2: Weekday vs. weekend traffic
-2026-11-26 20:06:56 [INFO] __main__: Successfully saved figure 2: weekday_vs_weekend_traffic.png
-2026-11-26 20:06:56 [INFO] __main__: Generating Visualisation 3: Traffic and weather relationships
-2026-11-26 20:06:57 [INFO] __main__: Successfully saved figure 3: traffic_weather_relationships.png
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Squall: 2061.75 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Fog: 2703.72 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Mist: 2933.34 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Thunderstorm: 2999.43 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Snow: 3016.32 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Clear: 3055.61 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Smoke: 3237.65 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Drizzle: 3292.19 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Rain: 3317.91 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Haze: 3502.10 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Calculated Baseline Metric - Clouds: 3617.99 vehicles/hour
-2026-11-26 20:06:57 [INFO] __main__: Generating Visualisation 4: Temperature vs. traffic
-2026-11-26 20:06:57 [INFO] __main__: Successfully saved figure 4: temperature_vs_traffic.png
-2026-11-26 20:06:57 [INFO] __main__: Generating Visualisation 5: Traffic Distribution
-2026-11-26 20:06:58 [INFO] __main__: Successfully saved figure 5: traffic_distribution.png
-2026-11-26 20:06:58 [INFO] __main__: Generating Visualisation 6: Congestion pattterns over time
-2026-11-26 20:06:58 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-2026-11-26 20:06:58 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-2026-11-26 20:06:58 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-2026-11-26 20:06:58 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-2026-11-26 20:06:58 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-2026-11-26 20:06:58 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-2026-11-26 20:06:58 [INFO] __main__: Successfully saved figure 6: congestion_patterns_over_time.png
-2026-11-26 20:06:58 [INFO] __main__: Execution completed successfully. All image files compiled
-2026-11-26 20:06:58 [INFO] __main__: ====================================================
-2026-11-26 20:06:58 [INFO] __main__: LAUNCHING AUTOMATED VISUALIZATION COMPILATION PHASE
-2026-11-26 20:06:58 [INFO] __main__: ====================================================
-2026-11-26 20:06:58 [INFO] __main__: Visualization engine executed successfully. Output artifacts ready.
-2026-11-26 20:06:58 [INFO] __main__: ====================================================
+2026-11-24 23:59:49 [INFO] __main__: ====================================================
+2026-11-24 23:59:49 [INFO] __main__: STARTING PART 2: TASK 3 - VISUALIZE TRAFFIC PATTERNS
+2026-11-24 23:59:49 [INFO] __main__: ====================================================
+2026-11-24 23:59:49 [INFO] __main__: Visualisation Workspace Initialized. Ingesting features matrix...
+2026-11-24 23:59:49 [INFO] __main__: Data ingested successfully. Analytical plotting loops ready
+2026-11-24 23:59:49 [INFO] __main__: Generating Visualisation 1: Traffic demand by hour
+2026-11-24 23:59:50 [INFO] __main__: Successfully saved figure 1: traffic_demand_by_hour.png
+2026-11-24 23:59:50 [INFO] __main__: Generating Visualisation 2: Weekday vs. weekend traffic
+2026-11-24 23:59:51 [INFO] __main__: Successfully saved figure 2: weekday_vs_weekend_traffic.png
+2026-11-24 23:59:51 [INFO] __main__: Generating Visualisation 3: Traffic and weather relationships
+2026-11-24 23:59:51 [INFO] __main__: Successfully saved figure 3: traffic_weather_relationships.png
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Squall: 2061.75 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Fog: 2703.72 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Mist: 2933.34 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Thunderstorm: 2999.43 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Snow: 3016.32 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Clear: 3055.61 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Smoke: 3237.65 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Drizzle: 3292.19 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Rain: 3317.91 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Haze: 3502.10 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Calculated Baseline Metric - Clouds: 3617.99 vehicles/hour
+2026-11-24 23:59:51 [INFO] __main__: Generating Visualisation 4: Temperature vs. traffic
+2026-11-24 23:59:52 [INFO] __main__: Successfully saved figure 4: temperature_vs_traffic.png
+2026-11-24 23:59:52 [INFO] __main__: Generating Visualisation 5: Traffic Distribution
+2026-11-24 23:59:53 [INFO] __main__: Successfully saved figure 5: traffic_distribution.png
+2026-11-24 23:59:53 [INFO] __main__: Generating Visualisation 6: Congestion pattterns over time
+2026-11-24 23:59:53 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-24 23:59:53 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-24 23:59:53 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-24 23:59:53 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-24 23:59:53 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-24 23:59:53 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-24 23:59:53 [INFO] __main__: Successfully saved figure 6: congestion_patterns_over_time.png
+2026-11-24 23:59:53 [INFO] __main__: Execution completed successfully. All image files compiled
+2026-11-24 23:59:53 [INFO] __main__: ====================================================
+2026-11-24 23:59:53 [INFO] __main__: LAUNCHING AUTOMATED VISUALIZATION COMPILATION PHASE
+2026-11-24 23:59:53 [INFO] __main__: ====================================================
+2026-11-24 23:59:54 [INFO] __main__: Visualization engine executed successfully. Output artifacts ready.
+2026-11-24 23:59:54 [INFO] __main__: ====================================================
 
 
 
-2026-11-26 20:08:14 [INFO] __main__: ====================================================================
-2026-11-26 20:08:14 [INFO] __main__: STARTING PART 2: TASK 4 - BUILD A MINI TRAFFIC ANALYTICS APPLICATION
-2026-11-26 20:08:14 [INFO] __main__: ====================================================================
-2026-11-26 20:08:14 [INFO] __main__: Initializing Smart City CLI Application Workspace...
-2026-11-26 20:08:14 [INFO] __main__: Database fully loaded into CLI cache matrix. Row Count: 48187
-2026-11-26 20:08:16 [INFO] __main__: Command Invoked: optimize-commute | Arguments: None
-2026-11-26 20:08:16 [INFO] __main__: Command Complete: Travel window recommendations generated successfully.
-2026-11-26 20:08:20 [INFO] __main__: Command Invoked: weather-traffic-lookup | Arguments: query_term='Snow'
-2026-11-26 20:08:20 [INFO] __main__: Command Complete: Weather conditions extraction complete for category 'Snow'.
-2026-11-26 20:08:21 [INFO] __main__: User requested exit sequence. Shutting down CLI interactive application engine
-2026-11-26 20:08:21 [INFO] __main__: ====================================================
+2026-11-25 00:00:02 [INFO] __main__: ====================================================================
+2026-11-25 00:00:02 [INFO] __main__: STARTING PART 2: TASK 4 - BUILD A MINI TRAFFIC ANALYTICS APPLICATION
+2026-11-25 00:00:02 [INFO] __main__: ====================================================================
+2026-11-25 00:00:02 [INFO] __main__: Initializing Smart City CLI Application Workspace...
+2026-11-25 00:00:02 [INFO] __main__: Database fully loaded into CLI cache matrix. Row Count: 48187
+2026-11-25 00:00:06 [INFO] __main__: Command Invoked: datetime-lookup | Arguments: target_date='2017'
+2026-11-25 00:00:06 [INFO] __main__: Command Complete: Operational database lookup finished successfully
+2026-11-25 00:00:09 [INFO] __main__: Command Invoked: congestion-lookup | Arguments: threshold=5600
+2026-11-25 00:00:09 [INFO] __main__: Command Complete: Congestion analysis mapping loop successfully logged
+2026-11-25 00:00:10 [INFO] __main__: Command Invoked: weekday-weekend-comparison | Arguments: None
+2026-11-25 00:00:10 [INFO] __main__: Command Complete: Weekday vs Weekend analytical matrix generated successfully
+2026-11-25 00:00:11 [INFO] __main__: Command Invoked: optimize-commute | Arguments: None
+2026-11-25 00:00:11 [INFO] __main__: Command Complete: Travel window recommendations generated successfully.
+2026-11-25 00:00:15 [INFO] __main__: Command Invoked: weather-traffic-lookup | Arguments: query_term='Snow'
+2026-11-25 00:00:15 [INFO] __main__: Command Complete: Weather conditions extraction complete for category 'Snow'.
+2026-11-25 00:00:17 [INFO] __main__: User requested exit sequence. Shutting down CLI interactive application engine
+2026-11-25 00:00:17 [INFO] __main__: ====================================================
 
 
 
