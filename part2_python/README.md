@@ -90,7 +90,7 @@ part2\_python/
 
 
 
-&#x20;   change to 
+&#x20;   change to
 
 &#x20;   csv\_filename = your file location that store the Metro\_Interstate\_Traffic\_Volume.csv file
 
@@ -98,7 +98,13 @@ part2\_python/
 
 
 
-2\. Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
+2\. Execute the Pipeline Sequentially from the Root Folder ('part2\_python/'):
+
+&#x20;  (Important: Always run these commands from the main 'part2\_python/' directory—do not 'cd' into the subfolders—so that all intermediate CSVs and 'pipeline.log' read and write to the shared root location).
+
+
+
+&#x20;  Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
 
 &#x20;  Step 2: Run feature\_engineering.py to use generated cleaned\_traffic\_data.csv in Step 1 to generate engineered\_traffic\_features.csv.
 
