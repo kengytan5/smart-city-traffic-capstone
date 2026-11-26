@@ -90,7 +90,7 @@ part3\_machine\_learning/
 
 
 
-1. Before executing any .py file under Part 3, please ensure you have ran Part 2 and obtain the engineered\_traffic\_features.csv file first. Please ensure engineered\_traffic\_features.csv file is in the same folder as the Proxy\_accident-risk\_label.py. Refer to the README\_md file in part2\_python folder for more information.
+1. Before executing any .py file under Part 3, please ensure you have run Part 2 and obtain the engineered\_traffic\_features.csv file first. Please ensure engineered\_traffic\_features.csv file is in the same folder as the Proxy\_accident-risk\_label.py. Refer to the README\_md file in part2\_python folder for more information.
 
 
 
