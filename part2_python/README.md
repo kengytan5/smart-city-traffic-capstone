@@ -42,7 +42,7 @@ part2\_python/
 
 │   └── Assignment 33 Part 2 - Task 4.ipynb                              #Task 4 Jupyter code
 
-├── .gitkeep.txt                                                         #This is a community-driven convention used to force Git to track an otherwise empty directory 
+├── .gitkeep.txt                                                         #This is a community-driven convention used to force Git to track an otherwise empty directory
 
 ├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
 
@@ -50,7 +50,7 @@ part2\_python/
 
 ├── engineered\_traffic\_features.csv                                      #Final ML-ready dataset (Output of Task 2), ready for Task 3 and 4
 
-├── feature\_engineering.py                                               #Task 2: Advanced Feature Generation \& Range Scaling Module                                                                                                            
+├── feature\_engineering.py                                               #Task 2: Advanced Feature Generation \& Range Scaling Module
 
 ├── Metro\_Interstate\_Traffic\_Volume.csv                                  #Source file for Task 1
 
@@ -72,25 +72,11 @@ part2\_python/
 
 
 
-1. Before executing any .py file, under pipeline.py, in #define the file configuration baseline, please change the csv\_filename location link to your own location that is storing the Metro\_Interstate\_Traffic\_Volume.csv as follows:
+1. Please ensure that Metro\_Interstate\_Traffic\_Volume.csv is in the same folder as the pipeline.py file.
 
 
 
-&#x20;   #Define the file configuration baseline
-
-&#x20;   csv\_filename = r'C:\\Users\\kw\\OneDrive\\NUSSOC\\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility   \\Part 2\\Metro\_Interstate\_Traffic\_Volume.csv'
-
-
-
-&#x20;   change to
-
-&#x20;   csv\_filename = your file location that store the Metro\_Interstate\_Traffic\_Volume.csv file
-
-
-
-
-
-2\. Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
+2\. Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv from Metro\_Interstate\_Traffic\_Volume.csv
 
 &#x20;  Step 2: Run feature\_engineering.py to use generated cleaned\_traffic\_data.csv in Step 1 to generate engineered\_traffic\_features.csv.
 
