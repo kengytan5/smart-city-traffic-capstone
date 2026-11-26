@@ -18,14 +18,6 @@ AI, ML and Data Science Capstone Project
 
 part2\_python/
 
-├── cli\_app
-
-│   └── CLIapp.py                                                        #Task 4: Interactive Command-Line Query Application Engine
-
-├── feature\_engineering
-
-│   └── feature\_engineering.py                                           #Task 2: Advanced Feature Generation \& Range Scaling Module
-
 ├── figures
 
 │   ├── congestion\_patterns\_over\_time.png                                #Task 3 Visualisation 6
@@ -42,35 +34,35 @@ part2\_python/
 
 ├── notebooks/
 
-│   ├── Assignment 33 Part 2 - Task 1.ipynb                              #Task 1
+│   ├── Assignment 33 Part 2 - Task 1.ipynb                              #Task 1 Jupyter code
 
-│   ├── Assignment 33 Part 2 - Task 2.ipynb                              #Task 2
+│   ├── Assignment 33 Part 2 - Task 2.ipynb                              #Task 2 Jupyter code
 
-│   ├── Assignment 33 Part 2 - Task 3.ipynb                              #Task 3
+│   ├── Assignment 33 Part 2 - Task 3.ipynb                              #Task 3 Jupyter code
 
-│   └── Assignment 33 Part 2 - Task 4.ipynb                              #Task 4
+│   └── Assignment 33 Part 2 - Task 4.ipynb                              #Task 4 Jupyter code
 
-├── pipeline
+├── .gitkeep.txt                                                         #This is a community-driven convention used to force Git to track an otherwise empty directory 
 
-│   └── pipeline.py                                                      #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
+├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
 
-├── pipeline.log
-
-│   └── pipeline.log                                                     #Unified chronological trail file of all pipeline events
-
-├── visualizations
-
-│   └── visualizations.py                                                #Task 3: Six-Chart Automated Plotting Module
-
-├── .gitkeep.txt                                                          #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── cleaned\_traffic\_data.csv                                             #Intermediate processed dataset (Output of Task 1)
+├── CLIapp.py                                                            #Task 4: Interactive Command-Line Query Application Engine
 
 ├── engineered\_traffic\_features.csv                                      #Final ML-ready dataset (Output of Task 2), ready for Task 3 and 4
+
+├── feature\_engineering.py                                               #Task 2: Advanced Feature Generation \& Range Scaling Module                                                                                                            
 
 ├── Metro\_Interstate\_Traffic\_Volume.csv                                  #Source file for Task 1
 
 ├── Part 2 - Executive Summary of Methodology and Findings Report.pdf    #1–2 summarising the methodology and findings
 
-└── README.md                                                            #Comprehensive replication guide and system layout guide
+├── pipeline.log                                                         #Unified chronological trail file of all pipeline events
+
+├── pipeline.py                                                          #Task 1: Ingestion, Validation, Cleaning \& Imputation Module
+
+├── README.md                                                            #Comprehensive replication guide and system layout guide
+
+└── visualizations.py                                                    #Task 3: Six-Chart Automated Plotting Module
 
 
 
@@ -98,13 +90,7 @@ part2\_python/
 
 
 
-2\. Execute the Pipeline Sequentially from the Root Folder ('part2\_python/'):
-
-&#x20;  (Important: Always run these commands from the main 'part2\_python/' directory—do not 'cd' into the subfolders—so that all intermediate CSVs and 'pipeline.log' read and write to the shared root location).
-
-
-
-&#x20;  Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
+2\. Step 1: Run pipeline.py first to generate cleaned\_traffic\_data.csv.
 
 &#x20;  Step 2: Run feature\_engineering.py to use generated cleaned\_traffic\_data.csv in Step 1 to generate engineered\_traffic\_features.csv.
 
