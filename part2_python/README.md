@@ -80,7 +80,21 @@ part2\_python/
 
 
 
-1. Before executing any .py file, under pipeline.py, in line 2, please change the csv\_filename location link to your own location that is storing the Metro\_Interstate\_Traffic\_Volume.csv
+1. Before executing any .py file, under pipeline.py, in #define the file configuration baseline, please change the csv\_filename location link to your own location that is storing the Metro\_Interstate\_Traffic\_Volume.csv as follows:
+
+
+
+&#x20;   #Define the file configuration baseline
+
+&#x20;   csv\_filename = r'C:\\Users\\kw\\OneDrive\\NUSSOC\\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility   \\Part 2\\Metro\_Interstate\_Traffic\_Volume.csv'
+
+
+
+&#x20;   change to 
+
+&#x20;   csv\_filename = your file location that store the Metro\_Interstate\_Traffic\_Volume.csv file
+
+
 
 
 

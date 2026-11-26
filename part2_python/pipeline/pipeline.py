@@ -18,7 +18,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 #Define the file configuration baseline
-#csv_filename = r'C:\Users\kw\OneDrive\NUSSOC\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility\Part 2\Metro_Interstate_Traffic_Volume.csv'
+csv_filename = r'C:\Users\kw\OneDrive\NUSSOC\Week 33 - Capstone Project - Smart City Traffic Intelligence - From Data Analytics to AI-Powered Mobility\Part 2\Metro_Interstate_Traffic_Volume.csv'
 
 EXPECTED_COLUMNS = [
     'holiday', 'temp', 'rain_1h', 'snow_1h', 
