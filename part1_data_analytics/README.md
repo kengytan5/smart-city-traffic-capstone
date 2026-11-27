@@ -18,31 +18,21 @@ AI, ML and Data Science Capstone Project
 
 part1\_data\_analytics/
 
-├── powerbi                                                              #Power BI dashboard (.pbix)
+├── powerbi/                                                             #Power BI dashboard (.pbix)
 
-│   └── Assignment 33 - PowerBI.pbix                                                        
+│   └── Assignment 33 - PowerBI.pbix
 
-├── sql                                                                  #SQL schema setup, data cleaning, and analytical queries
+├── sql/                                                                 #SQL schema setup, data cleaning, and analytical queries
 
-│   ├── Assignment 33.db                                                 
+│   ├── Assignment 33.db
 
-│   └── Assignment 33.sqbpro                                           
+│   └── Assignment 33.sqbpro
 
-├── statistics                                                           #Statistical and probability analysis Report                                
+├── statistics/                                                          #Statistical and probability analysis Report
 
-│   └── Statistical and probability analysis.pdf                                                                                 
+│   └── Statistical and probability analysis.pdf
 
 ├── .gitkeep.txt                                                         #This is a community-driven convention used to force Git to track an otherwise empty directory                                                                                                             ├── Data Analytics Insights Report.pdf                                   #Data Analytics Insights Report
 
 └── README.md                                                            #Part 1 documentation
-
-
-
-
-
-
-
-
-
-
 

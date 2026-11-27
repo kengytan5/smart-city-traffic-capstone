@@ -18,7 +18,7 @@ AI, ML and Data Science Capstone Project
 
 part2\_python/
 
-├── figures
+├── figures/
 
 │   ├── congestion\_patterns\_over\_time.png                                #Task 3 Visualisation 6
 
